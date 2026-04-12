@@ -15,7 +15,7 @@ public final class JjbaCosplay {
     public static final String BASE_CONTROLLER = "base_controller";
 
     public static void init() {
-        JCSoundRegistry.init();
+        JCSoundRegistry.register();
         JCItemRegistry.ITEM_REGISTRY.register();
         JCItemRegistry.LEGACY_ITEM_REGISTRY.register();
         registerAzArmor();

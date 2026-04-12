@@ -16,7 +16,7 @@ public interface JCSoundRegistry {
         return SOUNDS.register(event.getLocation().getPath(), () -> event);
     }
 
-    static void init() {
-        // intentionally left empty
+    static void register() {
+        SOUNDS.register();
     }
 }
