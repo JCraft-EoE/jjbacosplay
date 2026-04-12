@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+#issueTrackerURL = ""
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "jjbacosplay"
+version = "${version}"
+displayName = "JoJo's Bizzare Adventure Cosplay"
+authors = "JCraft EoE Team"
+description = '''
+JJBA cosplay for Minecraft
+'''
+logoFile = "icon.png"
+
+[[dependencies.jjbacosplay]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jjbacosplay]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
