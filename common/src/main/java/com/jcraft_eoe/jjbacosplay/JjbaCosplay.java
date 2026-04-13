@@ -18,10 +18,13 @@ public final class JjbaCosplay {
         JCSoundRegistry.register();
         JCItemRegistry.ITEM_REGISTRY.register();
         JCItemRegistry.LEGACY_ITEM_REGISTRY.register();
-        registerAzArmor();
         JCLootTableHelper.registerMusicDiscLootTables();
         JCCreativeMenuTabRegistry.register();
         JCCreativeMenuTabRegistry.CREATIVE_TAB_REGISTRY.register();
+    }
+
+    public static void postInit() {
+        registerAzArmor();
     }
 
     private static void registerAzArmor() {

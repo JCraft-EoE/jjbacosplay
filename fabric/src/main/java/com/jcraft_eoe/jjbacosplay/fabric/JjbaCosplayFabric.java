@@ -24,5 +24,7 @@ public final class JjbaCosplayFabric implements ModInitializer {
                 modification.accept(tableBuilder);
             }
         });
+
+        JjbaCosplay.postInit();
     }
 }
