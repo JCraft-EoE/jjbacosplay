@@ -101,6 +101,18 @@ public class JCAdvancementProvider extends FabricAdvancementProvider {
                 JCItemRegistry.JOTARO_P6_BOOTS
         );
         consumer.accept(obtainJotaroP6Outfit);
+        // obtain Avdol outfit
+        final Advancement obtainAvdolOutfit = generateCosplayAdvancement(
+                "avdol_outfit",
+                JCItemRegistry.AVDOL_WIG.get(ArmorMaterials.NETHERITE).get(),
+                FrameType.CHALLENGE,
+                obtainCosplay,
+                JCItemRegistry.AVDOL_WIG,
+                JCItemRegistry.AVDOL_COAT,
+                JCItemRegistry.AVDOL_PANTS,
+                JCItemRegistry.AVDOL_BOOTS
+        );
+        consumer.accept(obtainAvdolOutfit);
         // obtain Kakyoin outfit
         final Advancement obtainKakyoinOutfit = generateCosplayAdvancement(
                 "kakyoin_outfit",

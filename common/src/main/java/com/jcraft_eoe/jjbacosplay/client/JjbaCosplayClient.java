@@ -3,6 +3,8 @@ package com.jcraft_eoe.jjbacosplay.client;
 import com.jcraft_eoe.jjbacosplay.CosplayItem;
 import com.jcraft_eoe.jjbacosplay.JCItemRegistry;
 import com.jcraft_eoe.jjbacosplay.client.renderer.ArmorRenderer;
+import com.jcraft_eoe.jjbacosplay.client.renderer.AvdolOutfitRenderer;
+import com.jcraft_eoe.jjbacosplay.client.renderer.AvdolWigRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.CowboyGunbeltRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.DIOCapeRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.DIOtardRenderer;
@@ -50,6 +52,10 @@ public class JjbaCosplayClient {
     }
 
     private static void initCosplay() {
+        initCosplay(JCItemRegistry.AVDOL_WIG, AvdolWigRenderer::new);
+        initCosplay(JCItemRegistry.AVDOL_COAT, ArmorRenderer.simple("avdolcoat"));
+        initCosplay(JCItemRegistry.AVDOL_PANTS, AvdolOutfitRenderer::new);
+        initCosplay(JCItemRegistry.AVDOL_BOOTS, ArmorRenderer.simple("avdoloutfit"));
         initCosplay(JCItemRegistry.COWBOY_HAT, ArmorRenderer.simple("cowboy_outfit"));
         initCosplay(JCItemRegistry.COWBOY_PONCHO, ArmorRenderer.simple("cowboy_poncho"));
         initCosplay(JCItemRegistry.COWBOY_GUNBELT_SPURS, CowboyGunbeltRenderer::new);

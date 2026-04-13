@@ -85,6 +85,11 @@ public interface JCItemRegistry {
     CosplayItem<JotaroClothesP6Item> JOTARO_P6_PANTS = registerLeggingsLegacy("jotaro_p6_pants", JotaroClothesP6Item::new);
     CosplayItem<JotaroClothesP6Item> JOTARO_P6_BOOTS = registerBootsLegacy("jotaro_p6_boots", JotaroClothesP6Item::new);
 
+    CosplayItem<ArmorItem> AVDOL_WIG = registerHelmet("avdol_wig", ArmorItem::new);
+    CosplayItem<ArmorItem> AVDOL_COAT = registerChestplate("avdol_coat", ArmorItem::new);
+    CosplayItem<ArmorItem> AVDOL_PANTS = registerLeggings("avdol_pants", ArmorItem::new);
+    CosplayItem<ArmorItem> AVDOL_BOOTS = registerBoots("avdol_boots", ArmorItem::new);
+
     CosplayItem<KakyoinClothesItem> KAKYOIN_WIG = registerHelmetLegacy("kakyoin_wig", KakyoinClothesItem::new);
     CosplayItem<KakyoinCoatItem> KAKYOIN_COAT = registerChestplateLegacy("kakyoin_coat", KakyoinCoatItem::new);
     CosplayItem<KakyoinClothesItem> KAKYOIN_PANTS = registerLeggingsLegacy("kakyoin_pants", KakyoinClothesItem::new);
