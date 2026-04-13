@@ -55,7 +55,7 @@ processResources {
 }
 
 sourcesJar {
-    duplicatesStrategy DuplicatesStrategy.EXCLUDE // Ignore duplicate jcraft.accesswidener files
+    duplicatesStrategy DuplicatesStrategy.EXCLUDE // Ignore duplicate jjbacosplay.accesswidener files
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }
