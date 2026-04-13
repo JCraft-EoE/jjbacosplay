@@ -126,6 +126,18 @@ public class JCAdvancementProvider extends FabricAdvancementProvider {
         );
         consumer.accept(obtainPolnareffOutfit);
         // obtain Kira outfit
+        final Advancement obtainOkuyasuOutfit = generateCosplayAdvancement(
+                "okuyasu_outfit",
+                JCItemRegistry.OKUYASU_WIG.get(ArmorMaterials.NETHERITE).get(),
+                FrameType.CHALLENGE,
+                obtainCosplay,
+                JCItemRegistry.OKUYASU_WIG,
+                JCItemRegistry.OKUYASU_JACKET,
+                JCItemRegistry.OKUYASU_PANTS,
+                JCItemRegistry.OKUYASU_BOOTS
+        );
+        consumer.accept(obtainOkuyasuOutfit);
+        // obtain Kira outfit
         final Advancement obtainKiraOutfit = generateCosplayAdvancement(
                 "kira_outfit",
                 JCItemRegistry.KIRA_WIG.get(ArmorMaterials.NETHERITE).get(),

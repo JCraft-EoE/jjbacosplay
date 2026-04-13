@@ -24,6 +24,7 @@ import com.jcraft_eoe.jjbacosplay.client.renderer.KosakuJacketRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.MountainTimCoatRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.MountainTimPantsRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.OhDIOtardRenderer;
+import com.jcraft_eoe.jjbacosplay.client.renderer.OkuyasuOutfitRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.PucciRobeRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.RingoOutfitRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.RisottoBottomRenderer;
@@ -73,6 +74,10 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.OH_DIO_JACKET, ArmorRenderer.simple("oh_diojacket"));
         initCosplay(JCItemRegistry.OH_DIO_PANTS, OhDIOtardRenderer::new);
         initCosplay(JCItemRegistry.OH_DIO_BOOTS, OhDIOtardRenderer::new);
+        initCosplay(JCItemRegistry.OKUYASU_WIG, OkuyasuOutfitRenderer::new);
+        initCosplay(JCItemRegistry.OKUYASU_JACKET, ArmorRenderer.simple("okuyasujacket"));
+        initCosplay(JCItemRegistry.OKUYASU_PANTS, OkuyasuOutfitRenderer::new);
+        initCosplay(JCItemRegistry.OKUYASU_BOOTS, OkuyasuOutfitRenderer::new);
         initCosplay(JCItemRegistry.DOPPIO_WIG, ArmorRenderer.simple("doppiotop"));
         initCosplay(JCItemRegistry.DOPPIO_SHIRT, ArmorRenderer.simple("doppiotop"));
         initCosplay(JCItemRegistry.FINAL_KIRA_WIG, FinalKiraArmorRenderer::new);

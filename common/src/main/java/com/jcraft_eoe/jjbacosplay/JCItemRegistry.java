@@ -95,6 +95,11 @@ public interface JCItemRegistry {
     CosplayItem<ArmorItem> POLNAREFF_PANTS = registerLeggings("polnareff_pants", ArmorItem::new);
     CosplayItem<ArmorItem> POLNAREFF_BOOTS = registerBoots("polnareff_boots", ArmorItem::new);
 
+    CosplayItem<ArmorItem> OKUYASU_WIG = registerHelmet("okuyasu_wig", ArmorItem::new);
+    CosplayItem<ArmorItem> OKUYASU_JACKET = registerChestplate("okuyasu_jacket", ArmorItem::new);
+    CosplayItem<ArmorItem> OKUYASU_PANTS = registerLeggings("okuyasu_pants", ArmorItem::new);
+    CosplayItem<ArmorItem> OKUYASU_BOOTS = registerBoots("okuyasu_boots", ArmorItem::new);
+
     CosplayItem<KiraOutfitItem> KIRA_WIG = registerHelmetLegacy("kira_wig", KiraOutfitItem::new);
     CosplayItem<KiraJacketItem> KIRA_JACKET = registerChestplateLegacy("kira_jacket", KiraJacketItem::new);
     CosplayItem<KiraOutfitItem> KIRA_PANTS = registerLeggingsLegacy("kira_pants", KiraOutfitItem::new);
