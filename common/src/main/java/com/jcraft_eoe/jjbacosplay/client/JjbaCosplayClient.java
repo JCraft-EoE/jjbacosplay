@@ -149,6 +149,9 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.VALENTINE_JACKET, ValentineTopRenderer::new);
         initCosplay(JCItemRegistry.VALENTINE_PANTS, ValentineBottomRenderer::new);
         initCosplay(JCItemRegistry.VALENTINE_BOOTS, ValentineBottomRenderer::new);
+        initCosplay(JCItemRegistry.VICE_WIG, ArmorRenderer.simple("viceoutfit"));
+        initCosplay(JCItemRegistry.VICE_JACKET, ArmorRenderer.simple("viceoutfit"));
+        initCosplay(JCItemRegistry.VICE_BOOTS, ArmorRenderer.simple("viceoutfit"));
     }
 
     private static void initCosplay(CosplayItem<?> cosplay, Supplier<AzArmorRenderer> renderer) {
