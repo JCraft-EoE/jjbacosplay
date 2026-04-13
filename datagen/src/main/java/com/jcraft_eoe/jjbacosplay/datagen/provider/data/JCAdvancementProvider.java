@@ -208,6 +208,18 @@ public class JCAdvancementProvider extends FabricAdvancementProvider {
                 JCItemRegistry.GIORNO_BOOTS
         );
         consumer.accept(obtainGiornoOutfit);
+        // obtain Fugo outfit
+        final Advancement obtainFugoOutfit = generateCosplayAdvancement(
+                "fugo_outfit",
+                JCItemRegistry.FUGO_WIG.get(ArmorMaterials.NETHERITE).get(),
+                FrameType.CHALLENGE,
+                obtainCosplay,
+                JCItemRegistry.FUGO_WIG,
+                JCItemRegistry.FUGO_JACKET,
+                JCItemRegistry.FUGO_PANTS,
+                JCItemRegistry.FUGO_BOOTS
+        );
+        consumer.accept(obtainFugoOutfit);
         // obtain Risotto outfit
         final Advancement obtainRisottoOutfit = generateCosplayAdvancement(
                 "risotto_outfit",

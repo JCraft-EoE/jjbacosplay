@@ -3,3 +3,4 @@
   * okuyasu
   * vanilla ice
   * avdol
+  * fugo

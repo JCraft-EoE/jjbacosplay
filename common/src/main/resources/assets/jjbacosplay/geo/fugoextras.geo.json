@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fugo_outfit",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "rightLeg",
+					"pivot": [-1.9, 12, 0]
+				},
+				{
+					"name": "leftLeg",
+					"pivot": [0.05, 9.5, 0]
+				},
+				{
+					"name": "leftBoot",
+					"pivot": [2, 0.95, 0],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [4, 2, 4], "inflate": 0.3, "uv": [0, 38]},
+						{"origin": [0, -0.1, -2], "size": [4, 2, 4], "inflate": 0.45, "uv": [0, 44]}
+					]
+				},
+				{
+					"name": "rightBoot",
+					"pivot": [-2, 0.95, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2], "size": [4, 2, 4], "inflate": 0.3, "uv": [0, 38], "mirror": true},
+						{"origin": [-4, -0.1, -2], "size": [4, 2, 4], "inflate": 0.45, "uv": [0, 44], "mirror": true}
+					]
+				},
+				{
+					"name": "chestplate",
+					"pivot": [0, 16.61168, -0.55034],
+					"cubes": [
+						{"origin": [-4, 12, -1.97], "size": [8, 2.6, 4], "inflate": 0.4, "uv": [40, 23]}
+					]
+				},
+				{
+					"name": "leftArm",
+					"pivot": [6.54274, 20.28302, 0]
+				},
+				{
+					"name": "rightArm",
+					"pivot": [-6.54274, 20.28302, 0]
+				},
+				{
+					"name": "helmet",
+					"pivot": [0, 24.1625, 1.5125],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.751, "uv": [32, 32]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.52, "uv": [32, 48]},
+						{"origin": [-4, 21, 2.025], "size": [8, 2, 2], "inflate": 0.52, "uv": [0, 60]},
+						{"origin": [-4, 20.9, 2.025], "size": [8, 2, 2], "inflate": 0.55, "uv": [16, 33]}
+					]
+				}
+			]
+		}
+	]
+}

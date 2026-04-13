@@ -127,6 +127,11 @@ public interface JCItemRegistry {
     CosplayItem<GiornoClothesItem> GIORNO_PANTS = registerLeggingsLegacy("giorno_pants", GiornoClothesItem::new);
     CosplayItem<GiornoClothesItem> GIORNO_BOOTS = registerBootsLegacy("giorno_boots", GiornoClothesItem::new);
 
+    CosplayItem<ArmorItem> FUGO_WIG = registerHelmet("fugo_wig", ArmorItem::new);
+    CosplayItem<ArmorItem> FUGO_JACKET = registerChestplate("fugo_jacket", ArmorItem::new);
+    CosplayItem<ArmorItem> FUGO_PANTS = registerLeggings("fugo_pants", ArmorItem::new);
+    CosplayItem<ArmorItem> FUGO_BOOTS = registerBoots("fugo_boots", ArmorItem::new);
+
     CosplayItem<RisottoCapItem> RISOTTO_CAP = registerVampireHatLegacy("risotto_cap", RisottoCapItem::new);
     CosplayItem<FlutteringArmorItem> RISOTTO_JACKET = registerChestplateLegacy("risotto_jacket", FlutteringArmorItem::new);
     CosplayItem<RisottoBottomItem> RISOTTO_PANTS = registerLeggingsLegacy("risotto_pants", RisottoBottomItem::new);
