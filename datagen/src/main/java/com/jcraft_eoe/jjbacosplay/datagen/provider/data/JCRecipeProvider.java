@@ -496,11 +496,11 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                 new SymbolItem('G', Items.GREEN_WOOL),
                 new SymbolItem('P', Items.PURPLE_WOOL));
         generateCosplayRecipes(JCItemRegistry.DIAVOLO_BOOTS, exporter, new String[] {
-                        "BXB",
-                        "L L"
+                        "LXL",
+                        "W W"
                 },
-                new SymbolItem('B', Items.BLUE_WOOL),
-                new SymbolItem('L', Items.LIGHT_BLUE_WOOL));
+                new SymbolItem('L', Items.LIGHT_BLUE_WOOL),
+                new SymbolItem('W', Items.WHITE_WOOL));
         generateCosplayRecipes(JCItemRegistry.JOHNNY_CAP, exporter, new String[] {
                         " L ",
                         "WGW",
