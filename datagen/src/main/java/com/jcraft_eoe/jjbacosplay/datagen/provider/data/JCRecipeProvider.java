@@ -543,6 +543,34 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                 },
                 new SymbolItem('B', Items.BLACK_WOOL),
                 new SymbolItem('L', Items.LIGHT_GRAY_WOOL));
+        generateCosplayRecipes(JCItemRegistry.FUGO_WIG, exporter, new String[] {
+                        "WOW",
+                        "OXO"
+                },
+                new SymbolItem('O', Items.ORANGE_WOOL),
+                new SymbolItem('W', Items.WHEAT));
+        generateCosplayRecipes(JCItemRegistry.FUGO_JACKET, exporter, new String[] {
+                        "YBY",
+                        " X ",
+                        "YSY"
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('S', Items.SWEET_BERRIES),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
+        generateCosplayRecipes(JCItemRegistry.FUGO_PANTS, exporter, new String[] {
+                        "YGY",
+                        " X ",
+                        "Y Y"
+                },
+                new SymbolItem('G', Items.GOLD_NUGGET),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
+        generateCosplayRecipes(JCItemRegistry.FUGO_BOOTS, exporter, new String[] {
+                        "BPB",
+                        "BXB",
+                        " P "
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('P', Items.PINK_WOOL));
         generateCosplayRecipes(JCItemRegistry.DOPPIO_WIG, exporter, new String[] {
                         "WPW",
                         "PXP",
@@ -707,6 +735,44 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                 new SymbolItem('L', Items.LEATHER),
                 new SymbolItem('K', Items.GOLD_NUGGET),
                 new SymbolItem('N', Items.IRON_NUGGET));
+        generateCosplayRecipes(JCItemRegistry.MOUNTAIN_TIM_HAT, exporter, new String[] {
+                        " W ",
+                        "LXL"
+                },
+                new SymbolItem('L', Items.LEATHER),
+                new SymbolItem('W', Items.WHITE_WOOL));
+        generateCosplayRecipes(JCItemRegistry.MOUNTAIN_TIM_COAT, exporter, new String[] {
+                        "YWB",
+                        "WXW",
+                        "CCC"
+                },
+                new SymbolItem('B', Items.BLACK_WOOL),
+                new SymbolItem('C', Items.WHITE_CARPET),
+                new SymbolItem('W', Items.WHITE_WOOL),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
+        generateCosplayRecipes(JCItemRegistry.MOUNTAIN_TIM_SHIRT, exporter, new String[] {
+                        "YWB",
+                        "WXW",
+                        "WWW"
+                },
+                new SymbolItem('B', Items.BLACK_WOOL),
+                new SymbolItem('W', Items.WHITE_WOOL),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
+        generateCosplayRecipes(JCItemRegistry.MOUNTAIN_TIM_PANTS, exporter, new String[] {
+                        "LGB",
+                        "WXW",
+                        "W W"
+                },
+                new SymbolItem('B', Items.BROWN_WOOL),
+                new SymbolItem('G', Items.GOLD_NUGGET),
+                new SymbolItem('L', Items.LEATHER),
+                new SymbolItem('W', Items.WHITE_WOOL));
+        generateCosplayRecipes(JCItemRegistry.MOUNTAIN_TIM_BOOTS, exporter, new String[] {
+                        "GXG",
+                        "Y Y"
+                },
+                new SymbolItem('G', Items.GRAY_WOOL),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
         generateCosplayRecipes(JCItemRegistry.VALENTINE_WIG, exporter, new String[] {
                         " X ",
                         "W W",
