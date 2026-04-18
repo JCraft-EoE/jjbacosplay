@@ -139,6 +139,37 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                         "B B"
                 },
                 new SymbolItem('B', Items.BLACK_WOOL));
+        generateCosplayRecipes(JCItemRegistry.AVDOL_WIG, exporter, new String[] {
+                        "WBW",
+                        "CXC",
+                        "GGG"
+                },
+                new SymbolItem('B', Items.BLACK_WOOL),
+                new SymbolItem('C', Items.WHITE_CARPET),
+                new SymbolItem('G', Items.GOLD_INGOT),
+                new SymbolItem('W', Items.WHEAT));
+        generateCosplayRecipes(JCItemRegistry.AVDOL_COAT, exporter, new String[] {
+                        "OYO",
+                        "OXO",
+                        "CCC"
+                },
+                new SymbolItem('C', Items.ORANGE_CARPET),
+                new SymbolItem('O', Items.ORANGE_WOOL),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
+        generateCosplayRecipes(JCItemRegistry.AVDOL_PANTS, exporter, new String[] {
+                        "WWW",
+                        "WXW",
+                        "G G"
+                },
+                new SymbolItem('G', Items.LIGHT_GRAY_WOOL),
+                new SymbolItem('W', Items.WHITE_WOOL));
+        generateCosplayRecipes(JCItemRegistry.AVDOL_BOOTS, exporter, new String[] {
+                        "L L",
+                        "BXB",
+                        "B B"
+                },
+                new SymbolItem('B', Items.BROWN_WOOL),
+                new SymbolItem('L', Items.LEATHER));
         generateCosplayRecipes(JCItemRegistry.KAKYOIN_WIG, exporter, new String[] {
                         "WRW",
                         "RXR"
@@ -187,6 +218,28 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                         "BXB"
                 },
                 new SymbolItem('B', Items.BLACK_WOOL));
+        generateCosplayRecipes(JCItemRegistry.VICE_WIG, exporter, new String[] {
+                        "PBB",
+                        "WXW",
+                        " WW"
+                },
+                new SymbolItem('B', Items.BROWN_WOOL),
+                new SymbolItem('P', Items.PINK_WOOL),
+                new SymbolItem('W', Items.WHEAT));
+        generateCosplayRecipes(JCItemRegistry.VICE_JACKET, exporter, new String[] {
+                        "PBB",
+                        "ZXZ",
+                        "ZBZ"
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('P', Items.PINK_WOOL),
+                new SymbolItem('Z', Items.BLACK_WOOL));
+        generateCosplayRecipes(JCItemRegistry.VICE_BOOTS, exporter, new String[] {
+                        "G G",
+                        "BXB"
+                },
+                new SymbolItem('B', Items.BLACK_WOOL),
+                new SymbolItem('G', Items.GOLD_NUGGET));
         generateCosplayRecipes(JCItemRegistry.DIO_HEADBAND, exporter, new String[] {
                         "GXG"
                 },
@@ -329,6 +382,34 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                 },
                 new SymbolItem('O', Items.ORANGE_WOOL),
                 new SymbolItem('Y', Items.YELLOW_WOOL));
+        generateCosplayRecipes(JCItemRegistry.OKUYASU_WIG, exporter, new String[] {
+                        "WBW",
+                        "LXL"
+                },
+                new SymbolItem('B', Items.BLACK_WOOL),
+                new SymbolItem('L', Items.LIGHT_GRAY_WOOL),
+                new SymbolItem('W', Items.WHEAT));
+        generateCosplayRecipes(JCItemRegistry.OKUYASU_JACKET, exporter, new String[] {
+                        "BGB",
+                        "BXB",
+                        "BLB"
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('G', Items.GOLD_INGOT),
+                new SymbolItem('L', Items.LIGHT_BLUE_WOOL));
+        generateCosplayRecipes(JCItemRegistry.OKUYASU_PANTS, exporter, new String[] {
+                        "GEG",
+                        "BXB",
+                        "B B"
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('E', Items.EMERALD),
+                new SymbolItem('G', Items.GOLD_INGOT));
+        generateCosplayRecipes(JCItemRegistry.OKUYASU_BOOTS, exporter, new String[] {
+                        "GXG",
+                        "G G"
+                },
+                new SymbolItem('G', Items.GREEN_WOOL));
         generateCosplayRecipes(JCItemRegistry.KIRA_WIG, exporter, new String[] {
                         "WYW",
                         "YXY"

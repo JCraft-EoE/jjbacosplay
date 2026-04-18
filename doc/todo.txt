@@ -1,6 +1,3 @@
 * recipes for
   * mountain tim
-  * okuyasu
-  * vanilla ice
-  * avdol
   * fugo
