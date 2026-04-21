@@ -64,7 +64,18 @@ public class JCAdvancementProvider extends FabricAdvancementProvider {
                 JCItemRegistry.DIO_P1_PANTS,
                 JCItemRegistry.DIO_P1_BOOTS
         );
-        consumer.accept(obtainDioP1Outfit);
+        // obtain Joseph P2 outfit
+        final Advancement obtainJosephP2Outfit = generateCosplayAdvancement(
+                "joseph_p2_outfit",
+                JCItemRegistry.JOSEPH_WIG.get(ArmorMaterials.NETHERITE).get(),
+                FrameType.CHALLENGE,
+                obtainCosplay,
+                JCItemRegistry.JOSEPH_WIG,
+                JCItemRegistry.JOSEPH_SCARF,
+                JCItemRegistry.JOSEPH_PANTS,
+                JCItemRegistry.JOSEPH_BOOTS
+        );
+        consumer.accept(obtainJosephP2Outfit);
         // obtain Jotaro P3 outfit
         final Advancement obtainJotaroOutfit = generateCosplayAdvancement(
                 "jotaro_outfit",

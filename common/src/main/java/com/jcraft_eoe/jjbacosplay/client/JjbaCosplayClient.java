@@ -15,6 +15,7 @@ import com.jcraft_eoe.jjbacosplay.client.renderer.FugoShoesRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.GiornoArmorRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.GiornoJacketRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.GyroBottomRenderer;
+import com.jcraft_eoe.jjbacosplay.client.renderer.JosephOutfitRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.JotaroArmorP4Renderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.JotaroArmorP6Renderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.JotaroArmorRenderer;
@@ -137,6 +138,10 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.POLNAREFF_SHIRT, ArmorRenderer.simple("polnareffoutfit"));
         initCosplay(JCItemRegistry.POLNAREFF_PANTS, ArmorRenderer.simple("polnareffoutfit"));
         initCosplay(JCItemRegistry.POLNAREFF_BOOTS, ArmorRenderer.simple("polnareffoutfit"));
+        initCosplay(JCItemRegistry.JOSEPH_WIG, ArmorRenderer.simple("josephoutfit"));
+        initCosplay(JCItemRegistry.JOSEPH_SCARF, ArmorRenderer.flutter("josephscarf"));
+        initCosplay(JCItemRegistry.JOSEPH_PANTS, JosephOutfitRenderer::new);
+        initCosplay(JCItemRegistry.JOSEPH_BOOTS, ArmorRenderer.simple("josephoutfit"));
         initCosplay(JCItemRegistry.KARS_HEADWRAP, ArmorRenderer.simple("karsoutfit"));
         initCosplay(JCItemRegistry.KIRA_WIG, KiraArmorRenderer::new);
         initCosplay(JCItemRegistry.KIRA_JACKET, ArmorRenderer.simple("kirajacket"));

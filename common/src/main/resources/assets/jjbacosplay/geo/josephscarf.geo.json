@@ -1,0 +1,93 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.joseph_outfit",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "chestplate",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 22, -3.3], "size": [8, 2, 6], "inflate": 0.5, "pivot": [0, 23, -0.3], "rotation": [17.5, 0, 0], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "scarf tail",
+					"parent": "chestplate",
+					"pivot": [-2.5, 22.62189, 3.48907]
+				},
+				{
+					"name": "scarf",
+					"parent": "scarf tail",
+					"pivot": [-3.5, 22.62189, 3.48907],
+					"cubes": [
+						{"origin": [-4.5, 17.62189, 2.48907], "size": [2, 5, 1], "uv": [56, 0]}
+					]
+				},
+				{
+					"name": "scarf2",
+					"parent": "scarf",
+					"pivot": [0, 17.62189, 2.98907],
+					"cubes": [
+						{"origin": [-4.5, 12.62189, 2.48907], "size": [3, 5, 1], "uv": [0, 55]}
+					]
+				},
+				{
+					"name": "scarf3",
+					"parent": "scarf2",
+					"pivot": [0, 12.62189, 2.98907],
+					"cubes": [
+						{"origin": [-4.5, 7.62189, 2.48907], "size": [3, 5, 1], "uv": [8, 55]}
+					]
+				},
+				{
+					"name": "scarf4",
+					"parent": "scarf3",
+					"pivot": [0, 7.62189, 2.98907],
+					"cubes": [
+						{"origin": [-5.5, 2.62189, 2.48907], "size": [4, 5, 1], "uv": [48, 50]}
+					]
+				},
+				{
+					"name": "scarf5",
+					"parent": "scarf tail",
+					"pivot": [-1.5, 22.62189, 3.48907],
+					"cubes": [
+						{"origin": [-2.5, 17.62189, 2.48907], "size": [2, 5, 1], "uv": [56, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "scarf6",
+					"parent": "scarf5",
+					"pivot": [-1, 17.62189, 2.98907],
+					"cubes": [
+						{"origin": [-1.5, 12.62189, 2.48907], "size": [3, 5, 1], "uv": [0, 55], "mirror": true}
+					]
+				},
+				{
+					"name": "scarf7",
+					"parent": "scarf6",
+					"pivot": [0, 12.62189, 2.98907],
+					"cubes": [
+						{"origin": [-1.5, 7.62189, 2.48907], "size": [3, 5, 1], "uv": [8, 55], "mirror": true}
+					]
+				},
+				{
+					"name": "scarf8",
+					"parent": "scarf7",
+					"pivot": [0, 7.62189, 2.98907],
+					"cubes": [
+						{"origin": [-1.5, 2.62189, 2.48907], "size": [4, 5, 1], "uv": [48, 50], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

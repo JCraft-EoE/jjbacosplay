@@ -52,6 +52,11 @@ public interface JCItemRegistry {
 
     CosplayItem<StraizoPonchoItem> STRAIZO_PONCHO = registerChestplateLegacy("straizo_poncho", StraizoPonchoItem::new);
 
+    CosplayItem<ArmorItem> JOSEPH_WIG = registerHelmet("joseph_wig", ArmorItem::new);
+    CosplayItem<FlutteringArmorItem> JOSEPH_SCARF = registerChestplate("joseph_scarf", FlutteringArmorItem::new);
+    CosplayItem<ArmorItem> JOSEPH_PANTS = registerLeggings("joseph_pants", ArmorItem::new);
+    CosplayItem<ArmorItem> JOSEPH_BOOTS = registerBoots("joseph_boots", ArmorItem::new);
+
     CosplayItem<ArmorItem> KARS_HEADWRAP = registerVampireHatLegacy("kars_headwrap", ArmorItem::new);
 
     CosplayItem<DIOJacketItem> DIO_HEADBAND = registerHelmetLegacy("dio_headband", DIOJacketItem::new);
