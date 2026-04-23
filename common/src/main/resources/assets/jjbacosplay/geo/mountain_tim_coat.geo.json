@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.jotarocoat",
+				"identifier": "geometry.mountaintimcoat",
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
@@ -53,8 +53,8 @@
 					"parent": "chestplate",
 					"pivot": [-0.05312, 11.9854, -2.9375],
 					"cubes": [
-						{"origin": [-4.11562, 1.9854, -2.025], "size": [4, 10, 4.3], "inflate": 0.32, "uv": [0, 32]},
-						{"origin": [-3.86562, 1.9854, -2.025], "size": [3.75, 10, 4.05], "inflate": 0.32, "uv": [0, 50]}
+						{"origin": [-4.11562, 1.9854, -2.025], "size": [4, 10, 4.3], "inflate": 0.6, "uv": [0, 32]},
+						{"origin": [-3.86562, 1.9854, -2.025], "size": [3.75, 10, 4.05], "inflate": 0.6, "uv": [0, 50]}
 					]
 				},
 				{
@@ -62,8 +62,8 @@
 					"parent": "chestplate",
 					"pivot": [0.05312, 11.9854, -2.9375],
 					"cubes": [
-						{"origin": [0.11562, 1.9854, -2.025], "size": [4, 10, 4.3], "inflate": 0.32, "uv": [0, 32], "mirror": true},
-						{"origin": [0.11562, 1.9854, -2.025], "size": [3.75, 10, 4.05], "inflate": 0.32, "uv": [0, 50], "mirror": true}
+						{"origin": [0.11562, 1.9854, -2.025], "size": [4, 10, 4.3], "inflate": 0.6, "uv": [0, 32], "mirror": true},
+						{"origin": [0.11562, 1.9854, -2.025], "size": [3.75, 10, 4.05], "inflate": 0.6, "uv": [0, 50], "mirror": true}
 					]
 				},
 				{
