@@ -29,7 +29,7 @@
 					"name": "leftArm",
 					"pivot": [5, 22, 0],
 					"cubes": [
-						{"origin": [4, 12.05, -2], "size": [4, 12, 4], "inflate": 0.281, "uv": [0, 16], "mirror": true},
+						{"origin": [4, 12, -2], "size": [4, 12, 4], "inflate": 0.281, "uv": [0, 16], "mirror": true},
 						{"origin": [6.3, 22.55, -2], "size": [2, 2, 4], "inflate": 0.4, "pivot": [7.3, 23.3, 0], "rotation": [0, 0, -5], "uv": [48, 16], "mirror": true}
 					]
 				},
@@ -37,7 +37,7 @@
 					"name": "rightArm",
 					"pivot": [-5, 22, 0],
 					"cubes": [
-						{"origin": [-8, 12.05, -2], "size": [4, 12, 4], "inflate": 0.281, "uv": [0, 16]},
+						{"origin": [-8, 12, -2], "size": [4, 12, 4], "inflate": 0.281, "uv": [0, 16]},
 						{"origin": [-8.3, 22.55, -2], "size": [2, 2, 4], "inflate": 0.4, "pivot": [-7.3, 23.3, 0], "rotation": [0, 0, 5], "uv": [48, 16]}
 					]
 				},
