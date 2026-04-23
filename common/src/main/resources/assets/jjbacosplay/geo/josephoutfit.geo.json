@@ -34,8 +34,8 @@
 					"name": "rightArm",
 					"pivot": [-5, 22, 0],
 					"cubes": [
-						{"origin": [-8, 11.9, -2], "size": [4, 5, 4], "inflate": 0.391, "uv": [44, 41]},
-						{"origin": [-8, 11.8, -2], "size": [4, 6, 4], "inflate": 0.5, "uv": [48, 27]}
+						{"origin": [-8, 11.9, -2], "size": [4, 5, 4], "inflate": 0.5, "uv": [44, 41]},
+						{"origin": [-8, 11.8, -2], "size": [4, 6, 4], "inflate": 0.7, "uv": [48, 27]}
 					]
 				},
 				{
@@ -50,8 +50,8 @@
 					"name": "leftArm",
 					"pivot": [5, 22, 0],
 					"cubes": [
-						{"origin": [4, 11.9, -2], "size": [4, 5, 4], "inflate": 0.391, "uv": [44, 41], "mirror": true},
-						{"origin": [4, 11.8, -2], "size": [4, 6, 4], "inflate": 0.5, "uv": [48, 27], "mirror": true}
+						{"origin": [4, 11.9, -2], "size": [4, 5, 4], "inflate": 0.5, "uv": [44, 41], "mirror": true},
+						{"origin": [4, 11.8, -2], "size": [4, 6, 4], "inflate": 0.7, "uv": [48, 27], "mirror": true}
 					]
 				},
 				{
