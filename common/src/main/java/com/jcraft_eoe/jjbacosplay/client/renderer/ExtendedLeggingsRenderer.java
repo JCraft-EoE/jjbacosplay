@@ -1,21 +1,23 @@
 package com.jcraft_eoe.jjbacosplay.client.renderer;
 
+import mod.azure.azurelib.render.armor.AzArmorRenderer;
 import mod.azure.azurelib.render.armor.bone.AzArmorBoneContext;
 import net.minecraft.world.entity.EquipmentSlot;
 
-// renders wig
-public class JosephOutfitRenderer extends ArmorRenderer {
+import java.util.function.Supplier;
 
-    public static final String ID = "josephoutfit";
+/**
+ * Renders legs + chest + arms on the legs.
+ */
+public class ExtendedLeggingsRenderer extends ArmorRenderer {
 
-    public JosephOutfitRenderer() {
-        super(() -> new ArmorAnimator(ID), new AvdolOutfitBoneContext(), ID);
+    public ExtendedLeggingsRenderer(final String id) {
+        super(() -> new ArmorAnimator(id), new ExtendedLeggingsBoneContext(), id);
     }
 
-    protected static class AvdolOutfitBoneContext extends AzArmorBoneContext {
+    protected static class ExtendedLeggingsBoneContext extends AzArmorBoneContext {
         public void applyBoneVisibilityBySlot(EquipmentSlot currentSlot) {
             setAllVisible(false);
-
             if (currentSlot == EquipmentSlot.LEGS) {
                 setBoneVisible(this.body, true);
                 setBoneVisible(this.leftArm, true);
@@ -24,6 +26,10 @@ public class JosephOutfitRenderer extends ArmorRenderer {
                 setBoneVisible(this.rightLeg, true);
             }
         }
+    }
+
+    public static Supplier<AzArmorRenderer> of(final String id) {
+        return () -> new ExtendedLeggingsRenderer(id);
     }
 
 }
