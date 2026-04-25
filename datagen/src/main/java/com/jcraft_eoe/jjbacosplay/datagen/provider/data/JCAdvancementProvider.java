@@ -53,6 +53,18 @@ public class JCAdvancementProvider extends FabricAdvancementProvider {
                 JCItemRegistry.COWBOY_HAT,
                 JCItemRegistry.MOUNTAIN_TIM_HAT);
         consumer.accept(obtainSunProtection);
+        // obtain Johnathan outfit
+        final Advancement obtainJohnathan = generateCosplayAdvancement(
+                "jonathan_outfit",
+                JCItemRegistry.JONATHAN_WIG.get(ArmorMaterials.NETHERITE).get(),
+                FrameType.CHALLENGE,
+                obtainCosplay,
+                JCItemRegistry.JONATHAN_WIG,
+                JCItemRegistry.JONATHAN_GEAR,
+                JCItemRegistry.JONATHAN_PANTS,
+                JCItemRegistry.JONATHAN_BOOTS
+        );
+        consumer.accept(obtainJohnathan);
         // obtain Dio P1 outfit
         final Advancement obtainDioP1Outfit = generateCosplayAdvancement(
                 "dio_p1_outfit",

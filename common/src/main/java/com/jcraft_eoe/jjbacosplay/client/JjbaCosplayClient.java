@@ -84,6 +84,10 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.JOHNNY_JACKET, ArmorRenderer.simple("johnnytop"));
         initCosplay(JCItemRegistry.JOHNNY_PANTS, ExtendedLeggingsRenderer.of("johnnyclothes"));
         initCosplay(JCItemRegistry.JOHNNY_BOOTS, ArmorRenderer.simple("johnnyclothes"));
+        initCosplay(JCItemRegistry.JONATHAN_WIG, ArmorRenderer.simple("johnathan_outfit"));
+        initCosplay(JCItemRegistry.JONATHAN_GEAR, ArmorRenderer.simple("johnathan_gear"));
+        initCosplay(JCItemRegistry.JONATHAN_PANTS, ExtendedLeggingsRenderer.of("johnathan_outfit"));
+        initCosplay(JCItemRegistry.JONATHAN_BOOTS, ArmorRenderer.simple("johnathan_outfit"));
         initCosplay(JCItemRegistry.JOSEPH_WIG, ArmorRenderer.simple("josephoutfit"));
         initCosplay(JCItemRegistry.JOSEPH_SCARF, ArmorRenderer.flutter("josephscarf"));
         initCosplay(JCItemRegistry.JOSEPH_PANTS, ExtendedLeggingsRenderer.of("josephoutfit"));

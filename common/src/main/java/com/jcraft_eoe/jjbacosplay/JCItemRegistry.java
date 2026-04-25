@@ -14,6 +14,11 @@ public interface JCItemRegistry {
     DeferredRegister<Item> ITEM_REGISTRY = DeferredRegister.create(JjbaCosplay.MOD_ID, Registries.ITEM);
     DeferredRegister<Item> LEGACY_ITEM_REGISTRY = DeferredRegister.create("jcraft", Registries.ITEM);
 
+    CosplayItem<ArmorItem> JONATHAN_WIG = registerHelmet("jonathan_wig", ArmorItem::new);
+    CosplayItem<ArmorItem> JONATHAN_GEAR = registerChestplate("jonathan_gear", ArmorItem::new);
+    CosplayItem<ArmorItem> JONATHAN_PANTS = registerLeggings("jonathan_pants", ArmorItem::new);
+    CosplayItem<ArmorItem> JONATHAN_BOOTS = registerBoots("jonathan_boots", ArmorItem::new);
+
     CosplayItem<ArmorItem> DIO_P1_WIG = registerHelmetLegacy("dio_p1_wig", ArmorItem::new);
     CosplayItem<ArmorItem> DIO_P1_JACKET = registerChestplateLegacy("dio_p1_jacket", ArmorItem::new);
     CosplayItem<ArmorItem> DIO_P1_PANTS = registerLeggingsLegacy("dio_p1_pants", ArmorItem::new);

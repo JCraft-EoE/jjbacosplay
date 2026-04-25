@@ -81,6 +81,32 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                         " B "
                 },
                 new SymbolItem('B', Items.BLACK_WOOL));
+        generateCosplayRecipes(JCItemRegistry.JONATHAN_WIG, exporter, new String[] {
+                        "BWB",
+                        "BXB"
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('W', Items.WHEAT));
+        generateCosplayRecipes(JCItemRegistry.JONATHAN_GEAR, exporter, new String[] {
+                        " L ",
+                        "LXL",
+                        "L L"
+                },
+                new SymbolItem('L', Items.LEATHER));
+        generateCosplayRecipes(JCItemRegistry.JONATHAN_PANTS, exporter, new String[] {
+                        "BBB",
+                        "GXG",
+                        "L L"
+                },
+                new SymbolItem('B', Items.BLUE_WOOL),
+                new SymbolItem('G', Items.GRAY_WOOL),
+                new SymbolItem('L', Items.LIGHT_GRAY_WOOL));
+        generateCosplayRecipes(JCItemRegistry.JONATHAN_BOOTS, exporter, new String[] {
+                        "BXB",
+                        "Y Y",
+                },
+                new SymbolItem('B', Items.BROWN_WOOL),
+                new SymbolItem('Y', Items.YELLOW_WOOL));
         generateCosplayRecipes(JCItemRegistry.JOSEPH_WIG, exporter, new String[] {
                         "WWB",
                         "BXB"
