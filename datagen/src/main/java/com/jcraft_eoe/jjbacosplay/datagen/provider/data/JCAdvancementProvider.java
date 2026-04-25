@@ -64,6 +64,7 @@ public class JCAdvancementProvider extends FabricAdvancementProvider {
                 JCItemRegistry.DIO_P1_PANTS,
                 JCItemRegistry.DIO_P1_BOOTS
         );
+        consumer.accept(obtainDioP1Outfit);
         // obtain Joseph P2 outfit
         final Advancement obtainJosephP2Outfit = generateCosplayAdvancement(
                 "joseph_p2_outfit",
