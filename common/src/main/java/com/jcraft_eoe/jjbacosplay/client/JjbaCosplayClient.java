@@ -74,7 +74,7 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.GIORNO_BOOTS, ArmorRenderer.simple("giornoclothes"));
         initCosplay(JCItemRegistry.GYRO_HAT, ArmorRenderer.simple("gyrotop"));
         initCosplay(JCItemRegistry.GYRO_SHIRT, ArmorRenderer.simple("gyrotop"));
-        initCosplay(JCItemRegistry.GYRO_PANTS, ExtendedLeggingsRenderer.simple("gyrobottom"));
+        initCosplay(JCItemRegistry.GYRO_PANTS, ExtendedLeggingsRenderer.of("gyrobottom"));
         initCosplay(JCItemRegistry.GYRO_BOOTS, ArmorRenderer.simple("gyrobottom"));
         initCosplay(JCItemRegistry.HEAVEN_ATTAINED_WIG, ArmorRenderer.simple("heavenattainedoutfit"));
         initCosplay(JCItemRegistry.HEAVEN_ATTAINED_SHIRT, ArmorRenderer.simple("heavenattainedoutfit"));
