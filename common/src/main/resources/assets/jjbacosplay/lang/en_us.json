@@ -783,5 +783,6 @@
   "item.jjbacosplay.vice_wig_iron": "Vanilla Ice's Wig (Iron)",
   "item.jjbacosplay.vice_wig_leather": "Vanilla Ice's Wig (Leather)",
   "item.jjbacosplay.vice_wig_turtle": "Vanilla Ice's Wig (Turtle)",
-  "itemGroup.jjbacosplay.cosplay": "JJBA Cosplay"
+  "itemGroup.jjbacosplay.cosplay": "JJBA Cosplay",
+  "text.autoconfig.jjbacosplay.option.showingAllTiers": "Show all Cosplay Tiers"
 }

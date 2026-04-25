@@ -1,5 +1,6 @@
 package com.jcraft_eoe.jjbacosplay;
 
+import com.jcraft_eoe.jjbacosplay.client.JCClientConfig;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -23,9 +24,21 @@ public interface JCCreativeMenuTabRegistry {
                 // order of the creative tab
                 .displayItems((displayContext, entries) -> {
                     // cosplay
-                    for (final CosplayItem<?> cosplayItem : CosplayItem.all()) {
-                        for (final RegistrySupplier<? extends ArmorItem> item : cosplayItem) {
-                            entries.accept(item.get());
+                    if (JCClientConfig.getInstance().isShowingAllTiers()) {
+                        for (final CosplayItem<?> cosplayItem : CosplayItem.all()) {
+                            for (final RegistrySupplier<? extends ArmorItem> item : cosplayItem) {
+                                entries.accept(item.get());
+                            }
+                        }
+                    }
+                    else {
+                        for (final CosplayItem<?> cosplayItem : CosplayItem.all()) {
+                            if (cosplayItem.isVampireProtection()) {
+                                entries.accept(cosplayItem.get(ArmorMaterials.IRON).get());
+                            }
+                            else {
+                                entries.accept(cosplayItem.get(ArmorMaterials.NETHERITE).get());
+                            }
                         }
                     }
                 })

@@ -13,6 +13,8 @@ import com.jcraft_eoe.jjbacosplay.client.renderer.KiraArmorRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.KosakuArmorRenderer;
 import com.jcraft_eoe.jjbacosplay.client.renderer.KosakuJacketRenderer;
 import dev.architectury.registry.registries.RegistrySupplier;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import mod.azure.azurelib.render.armor.AzArmorRenderer;
 import mod.azure.azurelib.render.armor.AzArmorRendererRegistry;
 import net.fabricmc.api.EnvType;
@@ -26,6 +28,8 @@ public class JjbaCosplayClient {
 
     public static void init() {
         JCClientEventsRegistry.registerClientEvents();
+        AutoConfig.register(JCClientConfig.class, JanksonConfigSerializer::new);
+        JCClientConfig.load();
         initCosplay();
     }
 

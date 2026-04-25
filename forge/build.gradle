@@ -42,6 +42,9 @@ dependencies {
     // AzureLib
     modImplementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 
+    //Cloth
+    modApi("me.shedaniel.cloth:cloth-config-forge:11.1.118"){ transitive = false }
+
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 }
