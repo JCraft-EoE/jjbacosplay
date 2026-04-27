@@ -11,7 +11,8 @@
   "mixins": [
     "AnvilMenuMixin",
     "ArmorStandMixin",
-    "EntityMixin"
+    "EntityMixin",
+    "ItemStackMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,5 +1,6 @@
 package com.jcraft_eoe.jjbacosplay;
 
+import com.jcraft_eoe.jjbacosplay.datafixer.ItemMigrator;
 import dev.architectury.registry.registries.RegistrySupplier;
 import lombok.Getter;
 import lombok.NonNull;
@@ -63,7 +64,13 @@ public class CosplayItem<T extends ArmorItem> implements Iterable<RegistrySuppli
         this(modId, name, slot, false, ctor);
     }
 
-    public CosplayItem<T> register(final @NonNull CosplayItemRegistrator<T> registrator, final @Nullable CosplayItemRegistrator<T> legacyRegistrator) {
+    /**
+     * Registers all material variants of this cosplay item under {@link #modId}. If {@code legacy} is
+     * {@code true}, the netherite variant's name is also recorded with {@link ItemMigrator} so that
+     * existing world data referencing {@code jcraft:<name>} is migrated to {@code jjbacosplay:<name>}
+     * at load time.
+     */
+    public CosplayItem<T> register(final @NonNull CosplayItemRegistrator<T> registrator, final boolean legacy) {
         for (final var entry : (vampireProtection ? VAMPIRE_SUFFIXES.entrySet() : SUFFIXES.entrySet())) {
             // only register turtle for helmets
             if (entry.getKey() == ArmorMaterials.TURTLE && slot != ArmorItem.Type.HELMET) {
@@ -76,13 +83,13 @@ public class CosplayItem<T extends ArmorItem> implements Iterable<RegistrySuppli
             else {
                 properties = new Item.Properties();
             }
-            final RegistrySupplier<T> registrySupplier;
-            if (entry.getValue().isEmpty() && legacyRegistrator != null) {
-                registrySupplier = legacyRegistrator.register(name, () -> ctor.create(entry.getKey(), slot, properties));
+            // The netherite variant has an empty suffix and is the one that historically lived under
+            // the jcraft: namespace. Record the migration mapping for it before registering under the
+            // current namespace.
+            if (entry.getValue().isEmpty() && legacy) {
+                ItemMigrator.recordLegacyName(name);
             }
-            else {
-                registrySupplier = registrator.register(name + entry.getValue(), () -> ctor.create(entry.getKey(), slot, properties));
-            }
+            final RegistrySupplier<T> registrySupplier = registrator.register(name + entry.getValue(), () -> ctor.create(entry.getKey(), slot, properties));
             items.put(entry.getKey(), registrySupplier);
             LOOKUP.put(registrySupplier, this);
         }
@@ -90,7 +97,7 @@ public class CosplayItem<T extends ArmorItem> implements Iterable<RegistrySuppli
     }
 
     public CosplayItem<T> register(final @NonNull CosplayItemRegistrator<T> registrator) {
-        return register(registrator, null);
+        return register(registrator, false);
     }
 
     public @Nullable RegistrySupplier<T> get(final @NonNull ArmorMaterial material) {
