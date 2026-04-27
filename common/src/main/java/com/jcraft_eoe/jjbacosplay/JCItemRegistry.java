@@ -12,7 +12,6 @@ import java.util.function.Supplier;
 public interface JCItemRegistry {
 
     DeferredRegister<Item> ITEM_REGISTRY = DeferredRegister.create(JjbaCosplay.MOD_ID, Registries.ITEM);
-    DeferredRegister<Item> LEGACY_ITEM_REGISTRY = DeferredRegister.create("jcraft", Registries.ITEM);
 
     CosplayItem<ArmorItem> JONATHAN_WIG = registerHelmet("jonathan_wig", ArmorItem::new);
     CosplayItem<ArmorItem> JONATHAN_GEAR = registerChestplate("jonathan_gear", ArmorItem::new);
@@ -182,32 +181,31 @@ public interface JCItemRegistry {
         return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.BOOTS, ctor).register(JCItemRegistry::register);
     }
 
+    // The *Legacy variants register the item under the jjbacosplay: namespace exactly like the regular
+    // ones, but additionally record the netherite variant's name with the migrator so that any
+    // jcraft:<name> ItemStacks remaining in player worlds get rewritten on load.
     static <T extends ArmorItem> CosplayItem<T> registerVampireHatLegacy(String id, CosplayItem.CosplayItemConstructor<T> ctor) {
-        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.HELMET, true, ctor).register(JCItemRegistry::register, JCItemRegistry::registerLegacy);
+        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.HELMET, true, ctor).register(JCItemRegistry::register, true);
     }
 
     static <T extends ArmorItem> CosplayItem<T> registerHelmetLegacy(String id, CosplayItem.CosplayItemConstructor<T> ctor) {
-        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.HELMET, ctor).register(JCItemRegistry::register, JCItemRegistry::registerLegacy);
+        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.HELMET, ctor).register(JCItemRegistry::register, true);
     }
 
     static <T extends ArmorItem> CosplayItem<T> registerChestplateLegacy(String id, CosplayItem.CosplayItemConstructor<T> ctor) {
-        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.CHESTPLATE, ctor).register(JCItemRegistry::register, JCItemRegistry::registerLegacy);
+        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.CHESTPLATE, ctor).register(JCItemRegistry::register, true);
     }
 
     static <T extends ArmorItem> CosplayItem<T> registerLeggingsLegacy(String id, CosplayItem.CosplayItemConstructor<T> ctor) {
-        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.LEGGINGS, ctor).register(JCItemRegistry::register, JCItemRegistry::registerLegacy);
+        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.LEGGINGS, ctor).register(JCItemRegistry::register, true);
     }
 
     static <T extends ArmorItem> CosplayItem<T> registerBootsLegacy(String id, CosplayItem.CosplayItemConstructor<T> ctor) {
-        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.BOOTS, ctor).register(JCItemRegistry::register, JCItemRegistry::registerLegacy);
+        return new CosplayItem<>(JjbaCosplay.MOD_ID, id, ArmorItem.Type.BOOTS, ctor).register(JCItemRegistry::register, true);
     }
 
     static <T extends Item> RegistrySupplier<T> register(String id, Supplier<? extends T> supplier) {
         return ITEM_REGISTRY.register(id, supplier);
-    }
-
-    static <T extends Item> RegistrySupplier<T> registerLegacy(String id, Supplier<? extends T> supplier) {
-        return LEGACY_ITEM_REGISTRY.register(id, supplier);
     }
 
 }

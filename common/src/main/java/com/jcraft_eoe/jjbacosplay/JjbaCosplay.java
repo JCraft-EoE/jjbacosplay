@@ -17,7 +17,6 @@ public final class JjbaCosplay {
     public static void init() {
         JCSoundRegistry.register();
         JCItemRegistry.ITEM_REGISTRY.register();
-        JCItemRegistry.LEGACY_ITEM_REGISTRY.register();
         JCLootTableHelper.registerMusicDiscLootTables();
         JCCreativeMenuTabRegistry.register();
         JCCreativeMenuTabRegistry.CREATIVE_TAB_REGISTRY.register();
