@@ -178,9 +178,8 @@ public abstract class AnvilMenuMixin  extends ItemCombinerMenu {
 
             result.setRepairCost(t);
             EnchantmentHelper.setEnchantments(resultEnchantments, result);
+            resultSlots.setItem(0, result);
+            broadcastChanges();
         }
-
-        resultSlots.setItem(0, result);
-        broadcastChanges();
     }
 }
