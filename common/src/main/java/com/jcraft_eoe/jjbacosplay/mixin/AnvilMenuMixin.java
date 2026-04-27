@@ -56,7 +56,7 @@ public abstract class AnvilMenuMixin  extends ItemCombinerMenu {
             return;
         }
         ItemStack result = null;
-        int c = 0; // short for cost
+        int c = 1; // short for cost
         int customNameCost = 0;
         final var resultEnchantments = EnchantmentHelper.getEnchantments(item1);
         if (item2.getItem() instanceof EnchantedBookItem) { // anvil should have taken care of this one
@@ -166,7 +166,7 @@ public abstract class AnvilMenuMixin  extends ItemCombinerMenu {
             result = ItemStack.EMPTY;
         }
 
-        if (!result.isEmpty()) {
+        if (result != null && !result.isEmpty()) {
             int t = item1.getBaseRepairCost();
             if (t < item2.getBaseRepairCost()) {
                 t = item2.getBaseRepairCost();
