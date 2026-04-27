@@ -3,8 +3,10 @@ package com.jcraft_eoe.jjbacosplay;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 
 import java.util.function.Consumer;
@@ -17,46 +19,79 @@ public final class JCLootTableHelper {
     }
 
     public static void registerMusicDiscLootTables() {
-        // Openings: Desert/Jungle Temples (pyramids)
-        registerModification(JCLootTableHelper::addOpeningDiscs,
-                new ResourceLocation("chests/desert_pyramid"),
-                new ResourceLocation("chests/jungle_temple")
+        // Leather Cosplay: Villages
+        registerModification(JCLootTableHelper::addLeatherCosplay,
+                new ResourceLocation("chests/village/village_tannery")
         );
 
-        // JoJo's OST: Dungeons
-        registerModification(JCLootTableHelper::addOSTDiscs,
+        // Iron and Chainmail Cosplay: Blacksmith, Strongholds, Dungeons
+        registerModification(JCLootTableHelper::addIronCosplay,
+                new ResourceLocation("chests/village/village_armorer"),
+                new ResourceLocation("chests/stronghold_corridor"),
+                new ResourceLocation("chests/stronghold_crossing"),
                 new ResourceLocation("chests/simple_dungeon")
         );
 
-        // Endings: Ancient Cities and End Cities
-        registerModification(JCLootTableHelper::addEndingDiscs,
+        // Gold Cosplay: Ruined Portals, Bastions
+        registerModification(JCLootTableHelper::addGoldCosplay,
+                new ResourceLocation("chests/ruined_portal"),
+                new ResourceLocation("chests/bastion_bridge"),
+                new ResourceLocation("chests/bastion_other")
+        );
+
+        // Diamond Cosplay: Ancient Cities and End Cities
+        registerModification(JCLootTableHelper::addDiamondCosplay,
                 new ResourceLocation("chests/ancient_city"),
                 new ResourceLocation("chests/end_city_treasure")
         );
     }
 
-    // Openings: Desert Pyramids & Jungle Temples
-    private static void addOpeningDiscs(LootTable.Builder builder) {
-        builder.withPool(LootPool.lootPool()
-//                .add(LootItem.lootTableItem(JMItemRegistry.DISC_SONO_CHI_NO_SADAME.get()).setWeight(1))
-                .when(LootItemRandomChanceCondition.randomChance(0.25f))
-        );
+    private static void addLeatherCosplay(LootTable.Builder builder) {
+        var lootPool = LootPool.lootPool();
+        for (CosplayItem<?> cosplayItem : CosplayItem.all()) {
+            final var item = cosplayItem.get(ArmorMaterials.LEATHER);
+            if (item != null) {
+                lootPool.add(LootItem.lootTableItem(item.get()));
+            }
+        }
+        builder.withPool(lootPool.when(LootItemRandomChanceCondition.randomChance(0.05f)));
     }
 
-    // JoJo's OST: Dungeons
-    private static void addOSTDiscs(LootTable.Builder builder) {
-        builder.withPool(LootPool.lootPool()
-//                .add(LootItem.lootTableItem(JMItemRegistry.DISC_AWAKEN.get()).setWeight(1))
-                .when(LootItemRandomChanceCondition.randomChance(0.25f))
-        );
+    private static void addIronCosplay(LootTable.Builder builder) {
+        var lootPool = LootPool.lootPool();
+        for (CosplayItem<?> cosplayItem : CosplayItem.all()) {
+            var item = cosplayItem.get(ArmorMaterials.IRON);
+            if (item != null) {
+                lootPool.add(LootItem.lootTableItem(item.get()));
+            }
+            item = cosplayItem.get(ArmorMaterials.CHAIN);
+            if (item != null) {
+                lootPool.add(LootItem.lootTableItem(item.get()));
+            }
+        }
+        builder.withPool(lootPool.when(LootItemRandomChanceCondition.randomChance(0.05f)));
     }
 
-    // Endings: Ancient Cities & End Cities
-    private static void addEndingDiscs(LootTable.Builder builder) {
-        builder.withPool(LootPool.lootPool()
-//                .add(LootItem.lootTableItem(JMItemRegistry.DISC_TO_BE_CONTINUED.get()).setWeight(1))
-                .when(LootItemRandomChanceCondition.randomChance(0.25f))
-        );
+    private static void addGoldCosplay(LootTable.Builder builder) {
+        var lootPool = LootPool.lootPool();
+        for (CosplayItem<?> cosplayItem : CosplayItem.all()) {
+            final var item = cosplayItem.get(ArmorMaterials.GOLD);
+            if (item != null) {
+                lootPool.add(LootItem.lootTableItem(item.get()));
+            }
+        }
+        builder.withPool(lootPool.when(LootItemRandomChanceCondition.randomChance(0.05f)));
+    }
+
+    private static void addDiamondCosplay(LootTable.Builder builder) {
+        var lootPool = LootPool.lootPool();
+        for (CosplayItem<?> cosplayItem : CosplayItem.all()) {
+            final var item = cosplayItem.get(ArmorMaterials.DIAMOND);
+            if (item != null) {
+                lootPool.add(LootItem.lootTableItem(item.get()));
+            }
+        }
+        builder.withPool(lootPool.when(LootItemRandomChanceCondition.randomChance(0.05f)));
     }
 
     public static void registerModification(Consumer<LootTable.Builder> modifier, ResourceLocation... lootTables) {
