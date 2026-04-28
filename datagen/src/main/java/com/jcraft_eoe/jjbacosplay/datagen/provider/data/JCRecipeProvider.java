@@ -2,6 +2,7 @@ package com.jcraft_eoe.jjbacosplay.datagen.provider.data;
 
 import com.jcraft_eoe.jjbacosplay.CosplayItem;
 import com.jcraft_eoe.jjbacosplay.JCItemRegistry;
+import com.jcraft_eoe.jjbacosplay.JjbaCosplay;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -10,11 +11,13 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.Map;
 import java.util.function.Consumer;
@@ -68,6 +71,7 @@ public class JCRecipeProvider extends FabricRecipeProvider {
     @Override
     public void buildRecipes(final Consumer<FinishedRecipe> exporter) {
         buildCosplayRecipes(exporter);
+        buildSmithingTableRecipes(exporter);
     }
 
     public record SymbolItem(char symbol, Item item) {
@@ -906,4 +910,18 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                     .save(exporter);
         }
     }
+
+    private static void buildSmithingTableRecipes(final Consumer<FinishedRecipe> exporter) {
+        for (CosplayItem<?> cosplayItem : CosplayItem.all()) {
+            var diaItem = cosplayItem.get(ArmorMaterials.DIAMOND);
+            var nethItem = cosplayItem.get(ArmorMaterials.NETHERITE);
+            if (diaItem == null || nethItem == null) {
+                continue;
+            }
+            SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(diaItem.get()), Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, nethItem.get())
+                    .unlocks(cosplayItem.getName(), InventoryChangeTrigger.TriggerInstance.hasItems(diaItem.get()))
+                    .save(exporter, JjbaCosplay.id(cosplayItem.getName() + "_from_smithing_table"));
+        }
+    }
+
 }
