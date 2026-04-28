@@ -2,6 +2,7 @@ package com.jcraft_eoe.jjbacosplay.client;
 
 import com.jcraft_eoe.jjbacosplay.JCSoundRegistry;
 import com.jcraft_eoe.jjbacosplay.JCTagRegistry;
+import com.jcraft_eoe.jjbacosplay.item.FlutteringArmorItem;
 import com.jcraft_eoe.jjbacosplay.mixin_logic.Jangler;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -27,6 +28,7 @@ public class JCClientEvents {
     public static void tickClient(Minecraft client) {
         // Play jangle sound (from spurs) for all entities
         playJangle();
+        animateFlutteringArmor();
     }
 
     private static void playJangle() {
@@ -84,4 +86,33 @@ public class JCClientEvents {
             }
         }
     }
+
+    private static void animateFlutteringArmor() {
+        Minecraft mc = Minecraft.getInstance();
+        LocalPlayer player = mc.player;
+        ClientLevel level = mc.level;
+        if (player == null || level == null) {
+            return;
+        }
+
+        List<Entity> entities = level.getEntities((Entity)null, AABB.ofSize(player.position(), 1_000, 1_000, 1_000),
+                e -> e instanceof LivingEntity);
+
+        for (Entity entity : entities) {
+            for (ItemStack armorSlot : entity.getArmorSlots()) {
+                if (armorSlot.getItem() instanceof FlutteringArmorItem) {
+                    final boolean moving = entity == player
+                            ? player.getDeltaMovement().horizontalDistanceSqr() > 0.01
+                            : (entity.getX() - entity.xo)*(entity.getX() - entity.xo) + (entity.getY() - entity.yo)*(entity.getY() - entity.yo) + (entity.getZ() - entity.zo)*(entity.getZ() - entity.zo) > 0.01;
+                    if (moving) {
+                        FlutteringArmorItem.MOVING_CMD.sendForItem(entity, armorSlot);
+                    }
+                    else {
+                        FlutteringArmorItem.IDLE_CMD.sendForItem(entity, armorSlot);
+                    }
+                }
+            }
+        }
+    }
+
 }
