@@ -26,6 +26,9 @@
     ],
     "modmenu": [
       "com.jcraft_eoe.jjbacosplay.fabric.client.JCModMenuIntegration"
+    ],
+    "jei_mod_plugin": [
+      "com.jcraft_eoe.jjbacosplay.compat.JCJeiIntegration"
     ]
   },
   "mixins": [
