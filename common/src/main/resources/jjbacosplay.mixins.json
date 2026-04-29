@@ -12,6 +12,7 @@
     "AnvilMenuMixin",
     "ArmorStandMixin",
     "EntityMixin",
+    "ItemInputMixin",
     "ItemStackMixin"
   ],
   "injectors": {
