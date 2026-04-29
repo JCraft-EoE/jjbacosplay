@@ -43,7 +43,7 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.COWBOY_GUNBELT_SPURS, ExtendedLeggingsRenderer.of("cowboy_outfit"));
         initCosplay(JCItemRegistry.DIAVOLO_WIG, ArmorRenderer.simple("diavoloclothes"));
         initCosplay(JCItemRegistry.DIAVOLO_SHIRT, ArmorRenderer.flutter("diavoloshirt"));
-        initCosplay(JCItemRegistry.DIAVOLO_PANTS, ArmorRenderer.simple("diavoloclothes"));
+        initCosplay(JCItemRegistry.DIAVOLO_PANTS, ExtendedLeggingsRenderer.of("diavoloclothes"));
         initCosplay(JCItemRegistry.DIAVOLO_BOOTS, ArmorRenderer.simple("diavoloclothes"));
         initCosplay(JCItemRegistry.DIEGO_HAT, ArmorRenderer.simple("diegooutfit"));
         initCosplay(JCItemRegistry.DIEGO_SHIRT, ArmorRenderer.simple("diegotop"));
