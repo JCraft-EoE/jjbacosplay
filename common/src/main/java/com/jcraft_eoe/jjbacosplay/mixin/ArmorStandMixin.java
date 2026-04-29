@@ -19,7 +19,7 @@ public abstract class ArmorStandMixin {
                 value = "INVOKE",
                 target = "Lnet/minecraft/world/item/ItemStack;copyWithCount(I)Lnet/minecraft/world/item/ItemStack;",
         ordinal = 0))
-    public ItemStack jcraft$doNotCopyAzureLibUuid(final ItemStack instance, final int i, final Operation<ItemStack> original) {
+    public ItemStack jjbacosplay$doNotCopyAzureLibUuid(final ItemStack instance, final int i, final Operation<ItemStack> original) {
         final ItemStack copy = original.call(instance, i);
         if (copy.isEmpty()) {
             return copy;
