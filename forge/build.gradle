@@ -45,6 +45,11 @@ dependencies {
     //Cloth
     modApi("me.shedaniel.cloth:cloth-config-forge:11.1.118"){ transitive = false }
 
+    // compile against the JEI API but do not include it at runtime
+    compileOnly("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 }
