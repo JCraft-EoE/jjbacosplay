@@ -1,5 +1,6 @@
 package com.jcraft_eoe.jjbacosplay;
 
+import dev.architectury.event.events.common.CommandRegistrationEvent;
 import dev.architectury.registry.registries.RegistrySupplier;
 import mod.azure.azurelib.animation.cache.AzIdentityRegistry;
 import net.minecraft.resources.ResourceLocation;
@@ -20,6 +21,7 @@ public final class JjbaCosplay {
         JCLootTableHelper.registerMusicDiscLootTables();
         JCCreativeMenuTabRegistry.register();
         JCCreativeMenuTabRegistry.CREATIVE_TAB_REGISTRY.register();
+        CommandRegistrationEvent.EVENT.register(JCCommandRegistry::registerCommands);
     }
 
     public static void postInit() {
