@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.UUID;
 
 @Mixin(ItemInput.class)
-public class ItemInputMixin {
+public abstract class ItemInputMixin {
 
     @Inject(method = "createItemStack(IZ)Lnet/minecraft/world/item/ItemStack;", at = @At("RETURN"), cancellable = true)
     public void jjbacosplay$ensureAzureLibUuid(final int i, final boolean bl, final CallbackInfoReturnable<ItemStack> cir) {
