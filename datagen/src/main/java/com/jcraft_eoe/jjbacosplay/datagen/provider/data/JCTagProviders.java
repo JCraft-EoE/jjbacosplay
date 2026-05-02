@@ -8,7 +8,9 @@ import lombok.SneakyThrows;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,9 +26,14 @@ public interface JCTagProviders {
         protected void addTags(HolderLookup.Provider provider) {
             addCosplayTags();
 
+            final var piglinLoved = getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED);
+
             final var cosplay = getOrCreateTagBuilder(JCTagRegistry.COSPLAY);
             for (final CosplayItem<?> cosplayItem : CosplayItem.all()) {
                 cosplay.addTag(cosplayItem.getTag());
+                if (cosplayItem.get(ArmorMaterials.GOLD) != null) {
+                    piglinLoved.add(cosplayItem.get(ArmorMaterials.GOLD).get());
+                }
             }
 
             final var spurs = getOrCreateTagBuilder(JCTagRegistry.BOOTS_WITH_THE_SPURS);
