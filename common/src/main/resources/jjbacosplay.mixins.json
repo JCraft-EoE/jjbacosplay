@@ -13,7 +13,8 @@
     "ArmorStandMixin",
     "EntityMixin",
     "ItemInputMixin",
-    "ItemStackMixin"
+    "ItemStackMixin",
+    "PiglinAiMixin"
   ],
   "injectors": {
     "defaultRequire": 1
