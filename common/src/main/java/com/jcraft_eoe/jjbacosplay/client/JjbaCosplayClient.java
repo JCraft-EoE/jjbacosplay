@@ -55,7 +55,7 @@ public class JjbaCosplayClient {
         initCosplay(JCItemRegistry.DIO_BOOTS, ArmorRenderer.simple("diotard"));
         initCosplay(JCItemRegistry.DIO_CAPE, FlutteringChestRenderer.of("diocape"));
         initCosplay(JCItemRegistry.DIO_P1_WIG, ArmorRenderer.simple("diooutfit"));
-        initCosplay(JCItemRegistry.DIO_P1_JACKET, ArmorRenderer.simple("diotop"));
+        initCosplay(JCItemRegistry.DIO_P1_JACKET, ArmorRenderer.flutter("diotop"));
         initCosplay(JCItemRegistry.DIO_P1_PANTS, ExtendedLeggingsRenderer.of("diooutfit"));
         initCosplay(JCItemRegistry.DIO_P1_BOOTS, ArmorRenderer.simple("diooutfit"));
         initCosplay(JCItemRegistry.OH_DIO_WIG, ArmorRenderer.simple("oh_diojacket"));
