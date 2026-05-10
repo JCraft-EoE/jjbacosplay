@@ -812,7 +812,7 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                         "WWW"
                 },
                 new SymbolItem('B', Items.BLACK_WOOL),
-                new SymbolItem('W', Items.WHITE_WOOL),
+                new SymbolItem('W', Items.GRAY_WOOL),
                 new SymbolItem('Y', Items.YELLOW_WOOL));
         generateCosplayRecipes(JCItemRegistry.MOUNTAIN_TIM_PANTS, exporter, new String[] {
                         "LGB",
@@ -827,8 +827,8 @@ public class JCRecipeProvider extends FabricRecipeProvider {
                         "GXG",
                         "Y Y"
                 },
-                new SymbolItem('G', Items.GRAY_WOOL),
-                new SymbolItem('Y', Items.YELLOW_WOOL));
+                new SymbolItem('G', Items.RED_WOOL),
+                new SymbolItem('Y', Items.BROWN_WOOL));
         generateCosplayRecipes(JCItemRegistry.VALENTINE_WIG, exporter, new String[] {
                         " X ",
                         "W W",
