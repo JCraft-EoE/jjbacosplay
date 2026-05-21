@@ -13,6 +13,7 @@ public class JjbaCosplayDataGen implements DataGeneratorEntrypoint {
         final FabricDataGenerator.Pack pack = generator.createPack();
         pack.addProvider(JCModelProvider::new);
         pack.addProvider(JCTagProviders.JMItemTags::new);
+        pack.addProvider(JCTagProviders.JMEntityTags::new);
         pack.addProvider(JCRecipeProvider::new);
         pack.addProvider(JCAdvancementProvider::new);
     }

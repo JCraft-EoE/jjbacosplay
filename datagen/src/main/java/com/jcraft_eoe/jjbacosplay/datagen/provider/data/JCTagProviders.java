@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
 
@@ -68,6 +69,24 @@ public interface JCTagProviders {
             }
         }
 
+    }
+
+    class JMEntityTags extends FabricTagProvider.EntityTypeTagProvider {
+
+        public JMEntityTags(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+            super(output, completableFuture);
+        }
+
+        @Override
+        protected void addTags(final HolderLookup.Provider provider) {
+            final var canWearCosplay = getOrCreateTagBuilder(JCTagRegistry.CAN_WEAR_COSPLAY);
+            canWearCosplay.add(EntityType.ARMOR_STAND)
+                    .add(EntityType.ZOMBIE)
+                    .add(EntityType.SKELETON)
+                    .add(EntityType.ZOMBIE_VILLAGER)
+                    .add(EntityType.PIGLIN)
+                    .add(EntityType.ZOMBIFIED_PIGLIN);
+        }
     }
 
 }

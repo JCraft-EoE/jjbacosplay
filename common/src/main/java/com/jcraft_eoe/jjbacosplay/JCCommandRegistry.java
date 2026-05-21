@@ -1,6 +1,7 @@
 package com.jcraft_eoe.jjbacosplay;
 
 import com.jcraft_eoe.jjbacosplay.command.GrantAdvancementsCommand;
+import com.jcraft_eoe.jjbacosplay.command.OutfitCommand;
 import com.jcraft_eoe.jjbacosplay.command.PresentCommand;
 import com.jcraft_eoe.jjbacosplay.command.StatsCommand;
 import com.mojang.brigadier.CommandDispatcher;
@@ -12,6 +13,7 @@ public interface JCCommandRegistry {
 
     static void registerCommands(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext registryAccess, Commands.CommandSelection environment) {
         GrantAdvancementsCommand.register(dispatcher);
+        OutfitCommand.register(dispatcher);
         PresentCommand.register(dispatcher);
         StatsCommand.register(dispatcher);
     }
