@@ -37,7 +37,10 @@
     "java": ">=17"
   },
   "suggests": {
-    "jcraft-eoe": ">=0.17.6",
+    "jcraft-eoe": ">=0.18.0",
     "jjbamusic": ">=1.20.1-1.0.0"
+  },
+  "breaks": {
+    "jcraft-eoe": "<0.18.0"
   }
 }

@@ -30,6 +30,6 @@ side = "BOTH"
 [[dependencies.jjbacosplay]]
 modId = "jcraft"
 mandatory = false
-versionRange = "[0,)"
+versionRange = "[0.18.0,)"
 ordering = "AFTER"
 side = "BOTH"
