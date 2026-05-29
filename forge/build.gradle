@@ -40,10 +40,10 @@ dependencies {
     implementation(include("io.github.llamalad7:mixinextras-forge:0.4.1"))
 
     // AzureLib
-    modImplementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
+    include modImplementation("mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}")
 
     //Cloth
-    modApi("me.shedaniel.cloth:cloth-config-forge:11.1.118"){ transitive = false }
+    include modApi("me.shedaniel.cloth:cloth-config-forge:11.1.118"){ transitive = false }
 
     // compile against the JEI API but do not include it at runtime
     compileOnly("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
