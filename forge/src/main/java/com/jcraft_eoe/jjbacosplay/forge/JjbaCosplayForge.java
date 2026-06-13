@@ -18,6 +18,9 @@ public final class JjbaCosplayForge {
         IEventBus modBus = ctx.getModEventBus();
         EventBuses.registerModEventBus(JjbaCosplay.MOD_ID, modBus);
 
+        // Common setup event doesn't fire unless we register it.
+        modBus.register(this);
+
         // Run our common setup.
         JjbaCosplay.init();
         JCForgeLootModifiers.register(modBus);
