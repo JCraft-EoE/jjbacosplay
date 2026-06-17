@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "jjbacosplay_datagen",
+  "version": "${version}",
+  "name": "JoJo's Bizzare Adventure Cosplay — datagen",
+  "description": "Datagen for JJBA cosplay for Minecraft",
+  "authors": [
+    "JCraft EoE Team"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/JCraft-EoE/jjbacosplay"
+  },
+  "license": "All Rights Reserved",
+  "icon": "assets/jjbacosplay/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.jcraft_eoe.jjbacosplay.datagen.JjbaCosplayDataGen"
+    ]
+  }
+}

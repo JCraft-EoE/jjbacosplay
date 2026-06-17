@@ -21,9 +21,6 @@
     "client": [
       "com.jcraft_eoe.jjbacosplay.fabric.client.JjbaCosplayFabricClient"
     ],
-    "fabric-datagen": [
-      "com.jcraft_eoe.jjbacosplay.datagen.JjbaCosplayDataGen"
-    ],
     "modmenu": [
       "com.jcraft_eoe.jjbacosplay.fabric.client.JCModMenuIntegration"
     ]
